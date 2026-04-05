@@ -7,10 +7,18 @@
   border-bottom: 2px solid #f3e8ff;
 }
 
+.vl {
+  width: 2px;
+  height: 75px;
+  background-color: rgb(1, 43, 213);
+  margin-right: 20rem;
+}
+
 .nav-container {
   /* max-width: 1100px; */
   margin: 0 auto;
-  padding: 0.85rem 1rem;
+  /* padding: 0.85rem 1rem; */
+  padding: 0 0 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -21,24 +29,29 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 1.35rem;
-  padding-right: 3rem;
-  border-right: 2px solid rgb(1, 43, 213);
-  height: 100;
+  /* padding-right: 3rem; */
+  /* border-right: 2px solid rgb(1, 43, 213); */
+  /* height: 75px; */
 
   background: linear-gradient(to right, #7b2ff7, #ff4ecd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.bag-logo {
+  height: 80px;
+}
+
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  padding-right: 5rem;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #5b3b8c;
+  color: #7b2ff7;
   font-weight: 600;
   padding: 0.35rem 0.7rem;
   border-radius: 999px;

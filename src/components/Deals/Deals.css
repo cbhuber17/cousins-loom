@@ -1,0 +1,40 @@
+.deals-section {
+  padding: 3rem 1rem;
+}
+
+.deals-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.deals-container h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
+}
+
+.deals-card {
+  background: linear-gradient(135deg, #fdf4ff, #fce7f3);
+  border: 2px solid #f5c2e7;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.deals-main {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #7b2ff7;
+}
+
+.deals-sub {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.deals-sub span {
+  font-weight: 700;
+  color: #d63384;
+}
