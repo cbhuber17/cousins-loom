@@ -1,0 +1,105 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #222;
+  background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+:root {
+  font-family: "Baloo 2", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* Reset basics */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+/* Make everything use Baloo by default */
+body {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  background-color: #9caefd;
+  height: 100vh;
+}
+
+/* h1, h2, h3 {
+  font-family: 'Fredoka', sans-serif;
+} */
+
+/* .gradient-title {
+  font-size: 8.5rem;
+  font-weight: 700;
+
+  background: linear-gradient(to right, #6305fa, #aa6797);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+} */
+
+.gradient-title {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 8rem;
+}
+
+.shimmer-title {
+  background: linear-gradient(
+    90deg,
+    #6305fa 0%,
+    #a855f7 25%,
+    #aa6797 50%,
+    #ff7ad9 75%,
+    #7b2ff7 100%
+  );
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
