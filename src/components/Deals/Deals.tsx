@@ -1,5 +1,9 @@
 import "./Deals.css";
 
+function isAprilFourth(date = new Date()) {
+  return date.getMonth() === 3 && date.getDate() === 4;
+}
+
 function Deals() {
   return (
     <section id="deals" className="deals-section">
@@ -13,9 +17,17 @@ function Deals() {
           </p>
 
           <p className="deals-sub">
-            For baskets, big keychains, and small keychains:
-            <span> Buy 2, get 1 free!</span>
+            <span>
+              For baskets, big keychains, and small keychains: Buy 2, get 1
+              free!
+            </span>
           </p>
+          {isAprilFourth() && (
+            <p className="deals-sub">
+              birthday reward!
+              <span> for every 2 bracelets you buy, get two free!</span>
+            </p>
+          )}
         </div>
       </div>
     </section>
