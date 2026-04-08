@@ -4,6 +4,7 @@ export type Product = {
   image: string;
   description: string;
   price?: string;
+  quantity: number;
 };
 
 export const products: Product[] = [
@@ -13,6 +14,7 @@ export const products: Product[] = [
     image: "/images/products/rainbow-bracelet.jpg",
     description: "A bright and colorful handmade rainbow loom bracelet.",
     price: "$2",
+    quantity: 0,
   },
   {
     id: 2,
@@ -20,6 +22,7 @@ export const products: Product[] = [
     image: "/images/products/heart-charm-bracelet.jpg",
     description: "A cute bracelet with a heart-themed loom design.",
     price: "$2.50",
+    quantity: 0,
   },
   {
     id: 3,
@@ -27,6 +30,7 @@ export const products: Product[] = [
     image: "/images/products/pastel-loom-necklace.jpg",
     description: "A soft pastel necklace made with care and creativity.",
     price: "$3",
+    quantity: 0,
   },
   {
     id: 4,
@@ -34,5 +38,6 @@ export const products: Product[] = [
     image: "/images/products/flower-bracelet.jpg",
     description: "A fun floral-inspired rainbow loom bracelet.",
     price: "$2.50",
+    quantity: 0,
   },
 ];
