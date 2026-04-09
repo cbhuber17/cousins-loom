@@ -1,17 +1,18 @@
-import { useState } from "react";
 import "./Products.css";
 import ProductCard from "../ProductCard/ProductCard";
-import { products as initialProducts } from "../../data/products";
 import type { Product } from "../../data/products";
 
-function Products() {
-  const [products, setProducts] = useState<Product[]>(initialProducts);
+type ProductsProps = {
+  products: Product[];
+  setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
+};
 
+function Products({ products, setProducts }: ProductsProps) {
   const handleAddToCart = (productId: number) => {
     setProducts((prevProducts) =>
       prevProducts.map((product) =>
-        product.id === productId ? { ...product, quantity: 1 } : product,
-      ),
+        product.id === productId ? { ...product, quantity: 1 } : product
+      )
     );
   };
 
@@ -20,8 +21,8 @@ function Products() {
       prevProducts.map((product) =>
         product.id === productId
           ? { ...product, quantity: Math.min(product.quantity + 1, 9) }
-          : product,
-      ),
+          : product
+      )
     );
   };
 
@@ -30,8 +31,8 @@ function Products() {
       prevProducts.map((product) =>
         product.id === productId
           ? { ...product, quantity: Math.max(product.quantity - 1, 0) }
-          : product,
-      ),
+          : product
+      )
     );
   };
 

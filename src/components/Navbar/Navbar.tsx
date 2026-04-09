@@ -1,6 +1,10 @@
 import "./Navbar.css";
 
-function Navbar() {
+type NavbarProps = {
+  totalItems: number;
+};
+
+function Navbar({ totalItems }: NavbarProps) {
   return (
     <header className="top-nav">
       <div className="nav-container">
@@ -15,7 +19,12 @@ function Navbar() {
           <a href="#products">Products</a>
           <a href="#deals">Deals</a>
           <a href="#links">Links</a>
-          <img src="public/images/bag-cart.png" className="bag-logo" />
+          {/* <img src="public/images/bag-cart.png" className="bag-logo" /> */}
+          <div className="cart-wrapper">
+            <img src="public/images/bag-cart.png" className="bag-logo" />
+
+            {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
+          </div>
         </nav>
       </div>
     </header>
