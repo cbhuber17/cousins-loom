@@ -46,6 +46,7 @@ function Footer() {
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} The Cousins Loom</p>
+        <p>Website Created By: Colin Huber</p>
       </div>
     </footer>
   );
