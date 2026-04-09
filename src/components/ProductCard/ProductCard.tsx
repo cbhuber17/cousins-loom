@@ -27,8 +27,7 @@ function ProductCard({
       <div className="product-card-content">
         <h3 className="product-card-title">{product.name}</h3>
         <p className="product-card-description">{product.description}</p>
-
-        {product.price && <p className="product-card-price">{product.price}</p>}
+        <p className="product-card-price">${product.price.toFixed(2)}</p>
 
         {product.quantity === 0 ? (
           <button

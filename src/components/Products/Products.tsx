@@ -4,38 +4,17 @@ import type { Product } from "../../data/products";
 
 type ProductsProps = {
   products: Product[];
-  setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
+  onAddToCart: (productId: number) => void;
+  onIncreaseQuantity: (productId: number) => void;
+  onDecreaseQuantity: (productId: number) => void;
 };
 
-function Products({ products, setProducts }: ProductsProps) {
-  const handleAddToCart = (productId: number) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === productId ? { ...product, quantity: 1 } : product
-      )
-    );
-  };
-
-  const handleIncreaseQuantity = (productId: number) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === productId
-          ? { ...product, quantity: Math.min(product.quantity + 1, 9) }
-          : product
-      )
-    );
-  };
-
-  const handleDecreaseQuantity = (productId: number) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === productId
-          ? { ...product, quantity: Math.max(product.quantity - 1, 0) }
-          : product
-      )
-    );
-  };
-
+function Products({
+  products,
+  onAddToCart,
+  onIncreaseQuantity,
+  onDecreaseQuantity,
+}: ProductsProps) {
   return (
     <section id="products" className="products-section">
       <div className="products-container">
@@ -51,9 +30,9 @@ function Products({ products, setProducts }: ProductsProps) {
             <ProductCard
               key={product.id}
               product={product}
-              onAddToCart={handleAddToCart}
-              onIncreaseQuantity={handleIncreaseQuantity}
-              onDecreaseQuantity={handleDecreaseQuantity}
+              onAddToCart={onAddToCart}
+              onIncreaseQuantity={onIncreaseQuantity}
+              onDecreaseQuantity={onDecreaseQuantity}
             />
           ))}
         </div>

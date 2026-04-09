@@ -73,6 +73,13 @@ body {
   color: transparent;
 } */
 
+.page-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  min-height: 100vh;
+}
+
 .gradient-title {
   font-size: clamp(2rem, 8vw, 3.5rem);
   font-weight: 700;

@@ -74,6 +74,40 @@
   animation: pop 0.25s ease;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cart-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  background: linear-gradient(to right, #7b2ff7, #ff4ecd);
+  color: white;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.cart-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cart-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.cart-count {
+  min-width: 1rem;
+  text-align: center;
+}
+
 .nav-links {
   display: flex;
   flex-wrap: wrap;

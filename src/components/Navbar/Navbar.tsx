@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 type NavbarProps = {
-  totalItems: number;
+  cartItemCount: number;
 };
 
-function Navbar({ totalItems }: NavbarProps) {
+function Navbar({ cartItemCount }: NavbarProps) {
   return (
     <header className="top-nav">
       <div className="nav-container">
@@ -13,19 +14,34 @@ function Navbar({ totalItems }: NavbarProps) {
         </a>
         <div className="vl" />
 
-        <nav className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#products">Products</a>
-          <a href="#deals">Deals</a>
-          <a href="#links">Links</a>
-          {/* <img src="public/images/bag-cart.png" className="bag-logo" /> */}
-          <div className="cart-wrapper">
-            <img src="public/images/bag-cart.png" className="bag-logo" />
+        <div className="nav-right">
+          <nav className="nav-links" aria-label="Primary">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#products">Products</a>
+            <a href="#links">Links</a>
+          </nav>
 
-            {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
-          </div>
-        </nav>
+          {cartItemCount > 0 ? (
+            <Link to="/checkout" aria-label="Go to checkout">
+              <div className="cart-wrapper">
+                <img src="public/images/bag-cart.png" className="bag-logo" />
+
+                {cartItemCount > 0 && (
+                  <span className="cart-badge">{cartItemCount}</span>
+                )}
+              </div>
+            </Link>
+          ) : (
+            <div className="cart-wrapper">
+              <img src="public/images/bag-cart.png" className="bag-logo" />
+
+              {cartItemCount > 0 && (
+                <span className="cart-badge">{cartItemCount}</span>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
