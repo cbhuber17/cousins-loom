@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./Navbar.css";
 
 type NavbarProps = {
@@ -16,10 +17,18 @@ function Navbar({ cartItemCount }: NavbarProps) {
 
         <div className="nav-right">
           <nav className="nav-links" aria-label="Primary">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#products">Products</a>
-            <a href="#links">Links</a>
+            <HashLink smooth to="/#home">
+              Home
+            </HashLink>
+            <HashLink smooth to="/#about">
+              About Us
+            </HashLink>
+            <HashLink smooth to="/#products">
+              Products
+            </HashLink>
+            <HashLink smooth to="/#links">
+              Links
+            </HashLink>
           </nav>
 
           {cartItemCount > 0 ? (
