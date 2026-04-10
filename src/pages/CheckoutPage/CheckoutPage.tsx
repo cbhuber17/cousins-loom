@@ -14,16 +14,16 @@ function CheckoutPage({ products }: CheckoutPageProps) {
 
   const selectedProducts = useMemo(
     () => products.filter((product) => product.quantity > 0),
-    [products],
+    [products]
   );
 
   const totalAmount = useMemo(
     () =>
       selectedProducts.reduce(
         (sum, product) => sum + product.price * product.quantity,
-        0,
+        0
       ),
-    [selectedProducts],
+    [selectedProducts]
   );
 
   const handleCopyToClipboard = async () => {
@@ -39,7 +39,7 @@ function CheckoutPage({ products }: CheckoutPageProps) {
         (product) =>
           `- ${product.name}: $${product.price.toFixed(2)} x ${product.quantity} = $${(
             product.price * product.quantity
-          ).toFixed(2)}`,
+          ).toFixed(2)}`
       ),
       "",
       `Total: $${totalAmount.toFixed(2)}`,
@@ -56,7 +56,7 @@ function CheckoutPage({ products }: CheckoutPageProps) {
   };
 
   return (
-    <main className="checkout-page">
+    <main className="checkout-page" style={{ backgroundColor: "#9caefd" }}>
       <section className="checkout-container">
         <div className="checkout-image-column">
           <div className="checkout-image-placeholder">
@@ -156,7 +156,7 @@ function CheckoutPage({ products }: CheckoutPageProps) {
               Click the button above to copy your cart details, then paste them
               into an email and send it to:
             </p>
-            <p className="checkout-email">[email@domain.com]</p>
+            <p className="checkout-email">cbhuber@gmail.com</p>
             <p>
               We’ll work out pickup, delivery, or shipping details by email.
             </p>
