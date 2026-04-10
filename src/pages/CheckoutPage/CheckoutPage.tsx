@@ -149,20 +149,20 @@ function CheckoutPage({ products }: CheckoutPageProps) {
               {copyMessage && <p className="copy-message">{copyMessage}</p>}
             </form>
           </div>
-
-          <div className="checkout-card">
-            <h2>How to Order</h2>
-            <p>
-              Click the button above to copy your cart details, then paste them
-              into an email and send it to:
-            </p>
-            <p className="checkout-email">cbhuber@gmail.com</p>
-            <p>
-              We’ll work out pickup, delivery, or shipping details by email.
-            </p>
-          </div>
         </div>
       </section>
+      <div
+        className="checkout-card"
+        style={{ marginLeft: "10rem", marginRight: "10rem" }}
+      >
+        <h2>How to Order</h2>
+        <p>
+          Click the button above to copy your cart details, then paste them into
+          an email and send it to:
+        </p>
+        <p className="checkout-email">cbhuber@gmail.com</p>
+        <p>We’ll work out pickup, delivery, or shipping details by email.</p>
+      </div>
     </main>
   );
 }
