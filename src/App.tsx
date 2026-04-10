@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Products from "./components/Products/Products";
@@ -52,14 +53,14 @@ function App() {
 
   const cartItemCount = useMemo(
     () => products.reduce((sum, product) => sum + product.quantity, 0),
-    [products],
+    [products]
   );
 
   const handleAddToCart = (productId: number) => {
     setProducts((prevProducts) =>
       prevProducts.map((product) =>
-        product.id === productId ? { ...product, quantity: 1 } : product,
-      ),
+        product.id === productId ? { ...product, quantity: 1 } : product
+      )
     );
   };
 
@@ -68,8 +69,8 @@ function App() {
       prevProducts.map((product) =>
         product.id === productId
           ? { ...product, quantity: Math.min(product.quantity + 1, 9) }
-          : product,
-      ),
+          : product
+      )
     );
   };
 
@@ -78,13 +79,14 @@ function App() {
       prevProducts.map((product) =>
         product.id === productId
           ? { ...product, quantity: Math.max(product.quantity - 1, 0) }
-          : product,
-      ),
+          : product
+      )
     );
   };
 
   return (
     <>
+      <ScrollToTop />
       <Navbar cartItemCount={cartItemCount} />
 
       <Routes>
