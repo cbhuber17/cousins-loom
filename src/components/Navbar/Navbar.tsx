@@ -10,9 +10,9 @@ function Navbar({ cartItemCount }: NavbarProps) {
   return (
     <header className="top-nav">
       <div className="nav-container">
-        <a href="#home" className="nav-logo">
+        <HashLink smooth to="/#home" className="nav-logo">
           The Cousins Loom
-        </a>
+        </HashLink>
         <div className="vl" />
 
         <div className="nav-right">
