@@ -61,7 +61,7 @@ function CheckoutPage({ products }: CheckoutPageProps) {
         <div className="checkout-image-column">
           <div className="checkout-image-placeholder">
             <img
-              src="/images/checkout-photo.jpg"
+              src="public/images/mega-combo-set.jpg"
               alt="Rainbow loom checkout"
               className="checkout-image"
             />
