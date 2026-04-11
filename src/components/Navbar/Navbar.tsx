@@ -13,7 +13,7 @@ function Navbar({ cartItemCount }: NavbarProps) {
         <HashLink smooth to="/#home" className="nav-logo">
           The Cousins Loom
         </HashLink>
-        <div className="vl" />
+        {/* <div className="vl" /> */}
 
         <div className="nav-right">
           <nav className="nav-links" aria-label="Primary">
