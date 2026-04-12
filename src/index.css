@@ -47,7 +47,7 @@ body,
   min-height: 100%;
 }
 
-/* Make everything use Baloo by default */
+/* Make everything use Permanent Marker by default */
 body {
   font-family: "Permanent Marker", cursive;
   font-weight: 400;
@@ -57,22 +57,6 @@ body {
   height: 100vh;
 }
 
-/* h1, h2, h3 {
-  font-family: 'Fredoka', sans-serif;
-} */
-
-/* .gradient-title {
-  font-size: 8.5rem;
-  font-weight: 700;
-
-  background: linear-gradient(to right, #6305fa, #aa6797);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  background-clip: text;
-  color: transparent;
-} */
-
 .page-section {
   max-width: 1100px;
   margin: 0 auto;
@@ -81,11 +65,10 @@ body {
 }
 
 .gradient-title {
-  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-size: clamp(2rem, 8vw, 8rem);
   font-weight: 700;
   letter-spacing: 1px;
   margin: 0;
-  font-size: 8rem;
 }
 
 .shimmer-title {
